@@ -6,6 +6,11 @@ pipeline {
             sh 'mvn clean'
             }
         }
+	 stage('Deploy') {
+            steps {
+            sh './tmp/apache-tomcat-9.0.73/bin/startup.sh'
+            }
+        }
 	
     }
 }
