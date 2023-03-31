@@ -12,5 +12,12 @@ pipeline {
             }
         }
 	
+	stage('SystemTest') {
+            steps {
+            git url: https://github.com/shawtrig/EMSystemTests-ex.git
+	    sh 'mvn -Dtest=ExpenseManagerSystemTest test'
+            }
+        }
+	
     }
 }
