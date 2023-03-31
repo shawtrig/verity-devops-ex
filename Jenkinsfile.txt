@@ -7,6 +7,11 @@ pipeline {
             }
         }
 	
+	 stage('Deploy') {
+            steps {
+            sh '/tmp/apache-tomcat-9.0.73/bin/startup.sh'
+            }
+        }
 	
 	stage('SystemTest') {
             steps {
